@@ -1,0 +1,20 @@
+<h1>Listing Sruveys</h1>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Number of Questions</th>
+  </tr>
+ 
+  <% @surveys.each do |survey| %>
+    <tr>
+      <td><%= survey.heading %></td>
+      <td><%= survey.num_of_q %></td>
+      <td><%= link_to 'Show', survey_path(survey) %></td>
+      <td><%= link_to 'Edit', edit_survey_path(survey) %></td>
+      <td><%= link_to 'Delete', survey_path(survey), method: :delete, data: { confirm: 'Are you Sure?'} %></td>
+    </tr>
+  <% end %>
+</table>
+<%= link_to 'Home', root_path %>
+<%= link_to 'New Survey', new_survey_path %>
