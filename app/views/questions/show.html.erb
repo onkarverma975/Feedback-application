@@ -1,0 +1,6 @@
+<Strong><%= @question.body %></Strong
+<%i=1%>
+	<%dice.options.each do |op|%>
+	<%= "#{i}>" %><%=op.value%><br>
+	<%i+=1%>
+<%end%>

@@ -2,4 +2,13 @@
   <strong>Heading:</strong>
   <%= @survey.heading %>
 </p>
- 
+<%q=1%>
+<%@survey.questions.each do |dice| %>
+	<strong><%="Q: #{q}->"%></strong><%= dice.body%><br>
+	<%i=1%>
+		<%dice.options.each do |op|%>
+		<%= "#{i}>" %><%=op.value%><br>
+		<%i+=1%>
+	<%end%>
+	<%q+=1%>
+<%end%>

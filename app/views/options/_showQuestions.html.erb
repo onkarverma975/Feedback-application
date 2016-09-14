@@ -1,0 +1,11 @@
+<% @survey.questions.each do |hola|%>
+<p>
+	<strong>Question:</strong> <%= hola.body %>
+</p>
+<%i=1%>
+	<%hola.options.each do |op|%>
+	<%= "#{i}>" %><%=op.value%><br>
+	<%i+=1%>
+<%end%>
+
+<%end%>

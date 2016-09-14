@@ -1,0 +1,5 @@
+<%= render 'showSurvey' %>
+<%= render 'showQuestions'%>
+<h2>Add an Option:</h2>
+<%= render 'form' %>
+<%= link_to 'Done adding options', new_survey_question_path(survey_id: @survey.id, id: @question.id) %>

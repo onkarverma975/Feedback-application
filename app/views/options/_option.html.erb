@@ -1,0 +1,11 @@
+<p>
+    <strong>Option:</strong>
+    <%= option.value %>
+</p>
+ 
+<p>
+  <%= link_to 'Edit', edit_question_option_path(id: option.id, question_id: @question.id, survey_id: @survey.id) %>
+  <%= link_to 'Destroy Option', [option.question.survey, option],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>

@@ -2,7 +2,7 @@ class QuestionsController < ApplicationController
 	def create
 		@survey = Survey.find(params[:survey_id])
 		@question = @survey.questions.create(question_params)
-		redirect_to new_survey_question_path(survey_id: @survey.id)
+		redirect_to new_survey_question_option_path(survey_id: @survey.id, question_id: @question.id)
 	end
 	def new
 		@question = Question.new
@@ -21,6 +21,9 @@ class QuestionsController < ApplicationController
 			render 'edit'
 		end
 	end
+	def show 
+		@question = Question.find(params[:id])
+	end
 	def destroy
 		@survey = Survey.find(params[:survey_id])
 		@question = @survey.questions.find(params[:id])
@@ -29,6 +32,6 @@ class QuestionsController < ApplicationController
 	end
 	private
 	def question_params
-		params.require(:question).permit(:body,:num_of_op,:need_mul)
+		params.require(:question).permit(:body,:need_mul)
 	end
 end

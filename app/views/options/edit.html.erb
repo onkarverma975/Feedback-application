@@ -1,0 +1,12 @@
+<h1>Editing Options</h1>
+ 
+<%= form_for :option, url: survey_question_option_path(id: @option), method: :patch do |f| %>
+ 
+  <p>
+    <%= f.label :body %><br>
+    <%= f.text_field :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

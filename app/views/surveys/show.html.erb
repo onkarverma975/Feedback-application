@@ -2,6 +2,14 @@
   <strong>Heading:</strong>
   <%= @survey.heading %>
 </p>
- 
-<%= render @survey.questions %>
-<%= link_to 'Back', surveys_path %>
+<%q=1%>
+<%@survey.questions.each do |dice| %>
+	<strong><%="Q: #{q}->"%></strong><%= dice.body%><br>
+	<%i=1%>
+		<%dice.options.each do |op|%>
+		<%= "#{i}>" %><%=op.value%><br>
+		<%i+=1%>
+	<%end%>
+	<%q+=1%>
+<%end%>
+<%= link_to 'Back', controller: 'surveys' %>
