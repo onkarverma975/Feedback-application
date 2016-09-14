@@ -5,7 +5,7 @@ class SurveysController < ApplicationController
 	def create
 		@survey = Survey.new(survey_params)
 		if @survey.save
-			redirect_to @survey
+			redirect_to new_survey_question_path(survey_id: @survey.id)
 		else
 			render 'new'
 		end

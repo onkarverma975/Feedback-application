@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  body: MyString
+  num_of_op: 1
+  need_mul: false
+  survey: one
+
+two:
+  body: MyString
+  num_of_op: 1
+  need_mul: false
+  survey: two

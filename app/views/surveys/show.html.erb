@@ -4,7 +4,8 @@
 </p>
  
 <p>
-  <strong>Numebr of Questions:</strong>
+  <strong>Number of Questions:</strong>
   <%= @survey.num_of_q %>
 </p>
+<%= render @survey.questions %>
 <%= link_to 'Back', surveys_path %>

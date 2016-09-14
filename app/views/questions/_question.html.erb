@@ -1,0 +1,18 @@
+<p>
+    <strong>Question:</strong>
+    <%= question.body %>
+  </p>
+ 
+  <p>
+    <strong>Number of Options:</strong>
+    <%= question.num_of_op %>
+  </p>
+  <p>
+    <strong>Needs Multiple:</strong>
+    <%= question.need_mul %>
+</p>
+<p>
+  <%= link_to 'Destroy Question', [question.survey, question],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>

@@ -1,0 +1,17 @@
+<%= form_for([@survey, @survey.questions.build]) do |f| %>
+  <p>
+    <%= f.label :body %><br>
+    <%= f.text_field :body %>
+  </p>
+  <p>
+    <%= f.label :num_of_op %><br>
+    <%= f.text_field :num_of_op %>
+  </p>
+  <p>
+    <%= f.label :need_mul %><br>
+    <%= f.check_box :need_mul %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
