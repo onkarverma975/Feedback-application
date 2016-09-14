@@ -8,6 +8,19 @@ class QuestionsController < ApplicationController
 		@question = Question.new
 		@survey = Survey.find(params[:survey_id])
 	end
+	def edit
+		@question = Question.find(params[:id])
+		@survey = Survey.find(params[:survey_id])
+	end
+	def update
+		@question = Question.find(params[:id])
+		@survey = Survey.find(params[:survey_id])
+		if @question.update(question_params)
+			redirect_to survey_path(id: @survey.id)
+		else
+			render 'edit'
+		end
+	end
 	def destroy
 		@survey = Survey.find(params[:survey_id])
 		@question = @survey.questions.find(params[:id])

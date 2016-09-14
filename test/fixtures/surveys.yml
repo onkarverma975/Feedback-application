@@ -2,8 +2,6 @@
 
 one:
   heading: MyString
-  num_of_q: 1
 
 two:
   heading: MyString
-  num_of_q: 1

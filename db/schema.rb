@@ -10,11 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160913214100) do
+ActiveRecord::Schema.define(version: 20160914094030) do
 
   create_table "questions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "body"
-    t.integer  "num_of_op"
     t.boolean  "need_mul"
     t.integer  "survey_id"
     t.datetime "created_at", null: false
@@ -24,7 +23,6 @@ ActiveRecord::Schema.define(version: 20160913214100) do
 
   create_table "surveys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "heading"
-    t.integer  "num_of_q"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
