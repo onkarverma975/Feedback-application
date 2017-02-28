@@ -1,24 +1,19 @@
-# README
+# Feedback-application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Basic implementation project of a forms application on ruby of rails.
 
-Things you may want to cover:
+It has the following features:
 
-* Ruby version
+1. Admin can generate forms and share links for the people to fill them up.
 
-* System dependencies
+2. Users get the forms that they have not yet attempted and can fill them up at any time.
 
-* Configuration
+3. Users can edit their previous responses.
 
-* Database creation
+4. Users have the ability to login and edit their profiles.
 
-* Database initialization
+5. CRUD on forms
 
-* How to run the test suite
+6. CRUD on user profiles
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+7. User can eit their profiles.
